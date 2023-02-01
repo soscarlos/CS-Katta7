@@ -4,6 +4,12 @@ public class LastSurvivor
 {
     public string GetLastSurvivorNumber(string letters, int[] coordinates)
     {
-        return "this is the survivor method";
+        var length = coordinates.Length;
+        var result = letters;
+        for (var i = 0; i < length; i++)
+        {
+            result = result.Remove(coordinates[i], 1);
+        }
+        return result;
     }
 }
